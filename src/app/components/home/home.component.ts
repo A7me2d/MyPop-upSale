@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   searchValue:string = '';
   productTitle: any;
   imagePaths = [
-    { _id: 1, path: "/assets/img/slider-image-1.jpeg" },
-    { _id: 2, path: "/assets/img/slider-image-2.jpeg" },
-    { _id: 3, path: "/assets/img/slider-image-3.jpeg" }
+    { _id: 1, path: "assets/img/slider-image-1.jpeg" },
+    { _id: 2, path: "assets/img/slider-image-2.jpeg" },
+    { _id: 3, path: "assets/img/slider-image-3.jpeg" }
   ];
 
   constructor(private _products: PruductsService,private _cart:CartService,private toastr: ToastrService) {
