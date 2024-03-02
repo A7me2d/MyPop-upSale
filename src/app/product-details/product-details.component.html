@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-3">
+            <img [src]="productDetels?.imageCover" class="w-100" [alt]="productDetels?.title">
+        </div>
+        <div class="col-md-9">
+            <div class="layer h-100 d-flex flex-column justify-content-evenly">
+                <div>
+                    <h2>{{productDetels?.title}}</h2>
+                    <p class="text-muted">{{productDetels?.description}}</p>
+                </div>
+
+                <div>
+                    <p class="text-main">{{productDetels?.category?.name}}</p>
+                    <div class=" d-flex justify-content-between">
+                        <p>{{productDetels?.price}} EGP</p>
+                        <p>{{productDetels?.ratingsQuantity}}
+                            <i class="fa-solid fa-star rating-color"></i>
+                        </p>
+                    </div>
+                    <button (click)="addToMycart(productDetels._id)" class="btn bg-main w-100 text-light">add to Card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <div class="vh-100 d-flex justify-content-center align-items-center ">
+        <i class="fa-solid fa-spinner fa-spin fa-5x text-main"></i>
+    </div>
+</ng-template>

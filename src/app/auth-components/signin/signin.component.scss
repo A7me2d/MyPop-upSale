@@ -1,0 +1,29 @@
+.text-main{
+    font-weight: 600;
+}
+
+#login{
+    padding-top: 100px;
+}
+
+#trio{
+    border: 2px !important;
+    border-style: solid !important;
+    border-color: #177ddd !important;
+    color: #177ddd !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    transition: all 0.5s !important;
+
+}
+
+#trio:hover{
+    background-color: #0C8CB2 !important;
+    color: white !important;
+    border-color: #0C8CB2 !important;
+}
+
+#login-tri:hover{
+    color: aliceblue !important;
+    background-color: #177ddd !important;
+}

@@ -1,0 +1,45 @@
+<section id="login">
+    <div class="container my-5">
+        <h1 class="text-main">login Form</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit(loginForm)">
+            <div class="row">
+                <div class="col-md-8 m-auto bg-light shadow p-5 my-3">
+                    <div class="row gy-4">
+                       
+                        <div class="col-md-12">
+                            <label class="fw-bold" for="user_email">email</label>
+                            <input formControlName="email" type="email" class="form-control" id="user_email">
+                            <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched">
+                                <p *ngIf="loginForm.get('email')?.getError('required')" class="text-danger">this
+                                    field is required</p>
+                                <p *ngIf="loginForm.get('email')?.getError('email')" class="text-danger">enter valid
+                                    email</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="fw-bold" for="user_password">password</label>
+                            <input formControlName="password" type="password" class="form-control" id="user_password">
+                            <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+                                <p *ngIf="loginForm.get('password')?.getError('required')" class="text-danger">this
+                                    field is required</p>
+                                <p *ngIf="loginForm.get('password')?.getError('pattern')" class="text-danger">enter
+                                    valid password</p>
+                            </div>
+                        </div>                  
+                        <div>
+                            <p *ngIf="error" class="text-danger">{{error}}</p>
+
+                            <button [disabled]="loginForm.invalid" type="submit" class="btn bg-main text-light float-end" id="login-tri">Login
+                                <span *ngIf="isLoading">
+                                    <i class="fa-solid fa-spinner fa-spin"></i>
+                                </span>
+                            </button>
+                            <a routerLink="/forgetpassword" class="text-main --bs-info-border-subtle" id="trio">Reset Password</a>
+                        </div>
+                        <p class="text-muted">I didn`t have Account <a class="text-main" routerLink="/signup">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

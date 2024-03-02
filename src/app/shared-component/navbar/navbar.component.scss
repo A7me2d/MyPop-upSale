@@ -1,0 +1,32 @@
+.text-main::after{
+    background-color: black;
+    width: 100%;
+}
+
+.nav-link{
+    font-size:20px;
+    font-weight: 600;
+    text-transform: capitalize;    
+}
+
+.nav-link:focus,.nav-link:active ,.nav-link:hover {
+    color:#0C8CB2 !important;
+}
+
+.navbar-brand{
+    width: 150px !important;
+}
+.navbar-brand img{
+    width: 100px !important;
+}
+
+.badge{
+    font-size: 12px;
+}
+.fa-solid{
+    font-size: 30px;
+}
+
+.nav-link{
+    cursor: pointer;
+}

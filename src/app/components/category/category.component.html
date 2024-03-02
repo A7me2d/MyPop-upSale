@@ -1,0 +1,13 @@
+
+<div class="container pt-5 pb-5 mb-5 mt-5">
+    <div class="row gy-4">
+        <div class="col-md-4" *ngFor="let item of categryList">
+            <div class="card">
+                <img [src]="item.image" style="height: 280px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center fw-bold text-main">{{item.name}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

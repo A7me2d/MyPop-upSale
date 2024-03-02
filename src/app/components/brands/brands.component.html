@@ -1,0 +1,40 @@
+
+
+
+
+
+<div class="position-absolute w-100 m-auto">
+    <div class="container pt-5 pb-5 mb-5 mt-5" >
+        <h1 class="text-main text-center fw-bold">All Brands</h1>
+        <div class="row gy-4">
+            <div class="col-md-3" *ngFor="let itme of brandesList">
+                <div class="card" (click)="toggleContent(itme)">
+                    <img [src]="itme.image" style="height: 220px;" class="card-img-top" >
+                    <div class="card-body">
+                        <p class="card-text text-center fw-bold text-main">{{itme.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="closeDitels" *ngIf="details" (click)="toggleContent(null)" class="position-fixed vh-100 end-0 start-0 d-flex justify-content-center align-items-center" [class.d-none]="isContentVisible">
+    <div class="container" >
+        <div class="test-bg w-50 m-auto">
+            <div class="homeDetiels bg-light rounded-4 text-end p-4">
+                <i class="fa-solid fa-circle-xmark fa-2x mb-2" (click)="toggleContent(null)"></i>
+                <div class="ko d-flex align-items-center border-4 border-top">
+                    <div class="brandsname d-flex w-100 justify-content-between">
+                        <p class="fw-bold text-start text-main fa-2x d-flex align-items-center" >{{details.name}}</p>
+                        <div class="text-end">
+                            <img class="fw-bold m-auto fa-2x" [src]="details.image"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

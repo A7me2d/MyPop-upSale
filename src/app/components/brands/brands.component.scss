@@ -1,0 +1,24 @@
+.card{
+    transition: all 0.5s;
+}
+.card:hover{
+    box-shadow: 1px 1px 10px #177ddd;
+}
+
+.ko{
+    width:auto;
+    height: 200px;
+    border-radius: 1%;
+}
+
+#closeDitels{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+i{
+    cursor: pointer;
+}
+
+i:hover{
+   color: red;
+}
