@@ -28,6 +28,7 @@ ngOnInit(): void {
 addToMycart(productId:string){
   this._cart.addTocart(productId).subscribe({
     next:(res)=>{console.log(res)
+      this._cart.cartNumber.next(res.numOfCartItems);
       this.toastr.success('🛺',res.message,{
         closeButton:true,
       });
