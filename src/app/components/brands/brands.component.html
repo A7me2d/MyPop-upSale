@@ -3,13 +3,13 @@
 
 
 
-<div class="position-absolute w-100 m-auto" id="brans">
-    <div class="container pt-5 pb-5 mb-5 mt-5" >
-        <h1 class="text-main text-center fw-bold">All Brands</h1>
-        <div class="row gy-4">
-            <div class="col-md-3" *ngFor="let itme of brandesList">
-                <div class="card" (click)="toggleContent(itme)">
-                    <img [src]="itme.image" style="height: 220px;" class="card-img-top" >
+<div  class="  w-100 m-auto" id="brans">
+    <div class="container pt-5 mt-5 " >
+        <h1 class="text-main text-center fw-bold ">All Brands</h1>
+        <div class="row gy-4 ">
+            <div class="col-md-3 " *ngFor="let itme of brandesList">
+                <div class="card " (click)="toggleContent(itme)" >
+                    <img [src]="itme.image" class="card-img-top" >
                     <div class="card-body">
                         <p class="card-text text-center fw-bold text-main">{{itme.name}}</p>
                     </div>
@@ -20,7 +20,7 @@
 </div>
 
 
-<div id="closeDitels" *ngIf="details" (click)="toggleContent(null)" class="position-fixed vh-100 end-0 start-0 d-flex justify-content-center align-items-center" [class.d-none]="isContentVisible">
+<div id="closeDitels" *ngIf="details" (click)="toggleContent(null)" class=" z-3 fixed-top vh-100 end-0 start-0 d-flex justify-content-center align-items-center" [class.d-none]="isContentVisible">
     <div class="container" >
         <div class="test-bg w-50 m-auto">
             <div class="homeDetiels bg-light rounded-4 text-end p-4">

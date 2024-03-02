@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  isloading:boolean = true
   productsList: Products[] = [];
   searchValue:string = '';
   productTitle: any;
@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
     this._products.getProducts().subscribe({
       next: (response) => {
         this.productsList = response.data;
+        this.isloading = false
       },
       error: (err) => { console.log(err); }
     });
@@ -55,10 +56,12 @@ export class HomeComponent implements OnInit {
 
 
   categryList: any[] = [];
+
   getCategry() {
     this._products.getCategry().subscribe({
       next:(res)=>{
         this.categryList = res.data;
+        this.isloading = false
       }
     });
   }

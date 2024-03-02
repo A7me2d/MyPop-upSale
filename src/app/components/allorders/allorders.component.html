@@ -1,24 +1,32 @@
 <div id="allorders" class="pb-5">
     <div class="container" *ngIf="cartItems">
         <h1 class="text-main">All Orders</h1>
-        <div class="card mb-5" *ngFor="let cartItems of cartItems ; index as i">
-            <div class="card-body" >
-                <div class="row" >
-                    <div class="col-md-3" >
-                        <img [src]="cartItems.product.imageCover" class="w-100" alt="">
-                    </div>
-                    
-                    <div class="col-md-9 d-flex justify-content-center align-items-center">
-                        <div>
-                            <h4 class="fw-bold">Order Number: {{i+1}}</h4>
-                            <p class="text-main fw-bold">Total price: <span class="text-dark">{{cartItems.price}} EGP</span></p>
-                            <p class="text-main fw-bold">Brand Name: <span class="text-dark">{{cartItems.product.brand.name}}</span></p>
-                            <p class="fw-bold">{{cartItems.product.title}}</p>
-                            <p>Is Paid: <span class="bg-success text-light p-2 rounded-2">Yes</span></p>
+        
+            <div class="row">
+                <div class="col-md-6" *ngFor="let cartItems of cartItems ; index as i">
+                    <div class="card mb-5">
+                    <div class="card-body" >
+                        <div class="row" >
+                            <div class="col-md-3" >
+                                
+                                <img [src]="cartItems.product.imageCover" class="w-100" alt="">
+                            </div>
+                            
+                            <div class="col-md-9 d-flex justify-content-center align-items-center">
+                                <div>
+                                    <h4 class="fw-bold">Order Number: {{i+1}}</h4>
+                                    <p class="text-main fw-bold">Total price: <span class="text-dark">{{cartItems.price}} EGP</span></p>
+                                    <p class="text-main fw-bold">Brand Name: <span class="text-dark">{{cartItems.product.brand.name}}</span></p>
+                                    <p class="fw-bold text-main">Product name: <span class="text-dark">{{cartItems.product.title}}</span></p>
+                                    <p class="fw-bold text-main">count: <span class="text-dark">{{cartItems.count}}</span></p>
+                                    <p class="fw-bold">Is Paid: <span class="bg-success text-light p-2 rounded-2">Yes</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+          
         </div>
     </div>
 </div>
